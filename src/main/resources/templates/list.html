@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise302</title>
+</head>
+<body>
+<h1> Task form </h1>
+<a href="/add">Add a task </a><br />
+<div th:each="task : ${task}">
+    <h4 th:text="${task.taskname}">  </h4>
+    <h3 th:text="${task.duedate}"></h3>
+    <p th:text="${task.priority}"></p>
+</div>
+</body>
+</html>
